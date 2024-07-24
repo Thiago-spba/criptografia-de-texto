@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnigmaCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EnigmaCode</h1>
+            <h2>Codificador de Texto</h2>
+        </header>
+        <main>
+            <div class="entrada-imagem"> 
+                <section class="entrada">
+                    <textarea id="textoEntrada" placeholder="Digite seu texto aqui"></textarea>
+                </section>
+                <section class="imagem">
+                    <img src="High quality products 1 1.jpg" alt="Pessoa olhando um diamante com uma lupa">
+                </section>
+            </div>
+            <section class="botoes">
+                <button id="btnCriptografar" aria-label="Criptografar texto">Criptografar</button>
+                <button id="btnDescriptografar" aria-label="Descriptografar texto">Descriptografar</button>
+                <button id="btnCopiar" disabled aria-label="Copiar texto">Copiar</button>
+            </section>
+            <section class="saida">
+                <textarea id="textoSaida" readonly></textarea>
+            </section>
+            <div class="dica">
+                <p>Dica: A criptografia utilizada substitui as vogais por códigos.</p>
+            </div>
+        </main>
+        <footer>
+            <p>Desenvolvido por Thiago com orientação da Alura.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

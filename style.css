@@ -1,0 +1,161 @@
+/* Estilos gerais */
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(135deg, #292929, #121212); /* Gradiente de fundo escuro */
+    color: #0f0; /* Texto verde neon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Para o efeito de chuva */
+}
+
+.container {
+    background-color: #1f1f1f; /* Fundo preto mais claro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 255, 0, 0.2); 
+    text-align: center;
+    width: 90%;
+    max-width: 800px; /* Largura máxima ajustada para telas maiores */
+}
+
+h1 {
+    color: #0f0; 
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5); 
+}
+
+/* Estilos para entrada e imagem */
+.entrada-imagem {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #0f0;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1em;
+    resize: vertical;
+    box-shadow: none; 
+}
+
+textarea::placeholder {
+    color: #0f0;
+    opacity: 0.5;
+}
+
+.imagem {
+    max-width: 150px; 
+    align-self: flex-start; 
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos dos botões */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#btnCriptografar {
+    background-color: #0f0;
+    color: #121212; 
+}
+
+#btnCriptografar:hover {
+    background-color: #0a0;
+    color: white; 
+}
+
+#btnDescriptografar {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+#btnDescriptografar:hover {
+    background-color: #c82333; 
+}
+
+/* Estilos da saída */
+.saida {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos do rodapé */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Efeito de chuva Matrix */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 0, 0.05), 
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 1px,
+        transparent 30px 
+    );
+    animation: matrixRain 5s linear infinite;
+    pointer-events: none;
+    z-index: -1; 
+}
+
+@keyframes matrixRain {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .entrada-imagem {
+        flex-direction: column; 
+    }
+
+    .imagem {
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        height: 120px; 
+    }
+}
